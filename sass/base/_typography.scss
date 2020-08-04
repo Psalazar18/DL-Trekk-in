@@ -1,0 +1,12 @@
+h1{
+	font-family: $raleway;
+	font-weight: $bold;
+	@include relative-converter(font-size, rem, $xxxxxx-large, 16);
+}
+
+
+h3{
+	font-family: $raleway;
+	font-weight: $bold;
+	@include relative-converter(font-size, rem, $large, 16);	
+}

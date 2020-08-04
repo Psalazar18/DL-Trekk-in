@@ -1,0 +1,5 @@
+body{
+	font-family: $open-sans;
+	font-weight: $regular;
+	 @include relative-converter(font-size, rem, $medium, 16);
+}

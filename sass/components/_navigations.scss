@@ -1,0 +1,31 @@
+.collapsible {
+	text-align: right;
+	label {
+	display: block;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-right: 1.5em;
+	font-size: 1.8rem;
+	}
+}
+// #menu {
+// 	display: none;
+// }
+// input:checked ~ .nav__items, .nav__items-right0 {
+// max-height: 100%;
+// }
+.nav{
+	padding:2em;
+}
+.nav__items-left{
+	text-align: center;
+}
+.nav__items {
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav__items-right{
+	display: flex;
+	justify-content: flex-end;
+}

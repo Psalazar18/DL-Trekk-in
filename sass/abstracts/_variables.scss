@@ -1,0 +1,54 @@
+//Esquema de colores
+
+//Primer esquema
+$white: #fff;
+$platinum: #E8E8E8;
+$gray: #BABABA;
+
+//Segundo esquema
+$dark-salmon: #EE9480;
+$melon: #F4BAAE;
+$pale-pink: #FADFDA;
+
+//Tercer esquema
+$ball-blue: #2AB7CA;
+$middle-blue: #77D1DD;
+$blue-lagoon: #B1E4EB;
+
+
+//Cuarto esquema
+$onyx: #333745;
+$spanish-gray: #8F9199;	
+$lavander-gray: #C7C8CC;
+
+//Quinto esquema
+$raising-black: #221D23;
+$nickel: #726F73;
+$silver-chalice: #AEACAF;
+
+//Tipografía
+$raleway: 'Raleway', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+//Peso de fuentes
+$regular: 400;
+$bold: 700;
+
+//Tamaños de fuente
+$xxxxxx-large: 50;
+$xxxx-large: 45;
+$xxx-large: 40;
+$xx-large: 35;
+$x-large: 30;
+$large: 20;
+$medium: 16;
+$small: 14;
+$x-small: 12;
+
+//Breakpoints
+$breakpoints: (
+  'sm': (min-width: 576px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 992px),
+  'xl': (min-width: 1200px),
+);

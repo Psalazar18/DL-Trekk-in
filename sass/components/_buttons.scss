@@ -1,0 +1,25 @@
+.nav__item-right-button{
+	background-color: $ball-blue;
+	color: $white;
+	border: 0;
+	font-weight: $bold;
+	height: 2em;
+	margin-top: 1em;
+	margin-left: 1em;
+	&:hover{
+		background-color: $middle-blue;
+	}
+	&:focus{
+		background-color: $lavander-gray;
+	}
+}
+
+.section__card1-button, .section__card2-button{
+	background-color: $ball-blue;
+	color: $white;
+	border: 0;
+	font-family: $open-sans;
+	font-weight: $bold;
+	padding: 1em 7em;
+	@include relative-converter(font-size, rem, $medium, 16);
+}
