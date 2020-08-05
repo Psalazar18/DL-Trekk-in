@@ -1,5 +1,10 @@
 body{
 	font-family: $open-sans;
 	font-weight: $regular;
-	 @include relative-converter(font-size, rem, $medium, 16);
+}
+
+@keyframes fade {
+	0% { opacity: 0; }
+	60% { opacity: .5; }
+	100% { opacity: 1; }
 }

@@ -1,31 +1,72 @@
+.nav{
+	padding:2em;
+	position: relative;
+}
+.nav__logo{
+	position: absolute;
+	text-align: center;
+}
+.nav__list {
+	padding-left: 2em;
+	font-family: $open-sans;
+	ul{
+		display: flex;
+	}
+	li{
+		list-style-type: none;
+		padding-right: 1em;
+	}
+}
+
 .collapsible {
 	text-align: right;
 	label {
-	display: block;
-	padding-top: .5em;
-	padding-bottom: .5em;
-	padding-right: 1.5em;
-	font-size: 1.8rem;
+		display: block;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		padding-right: 1.5em;
 	}
 }
-// #menu {
-// 	display: none;
-// }
-// input:checked ~ .nav__items, .nav__items-right0 {
-// max-height: 100%;
-// }
-.nav{
-	padding:2em;
+#menu {
+	display: none;
 }
-.nav__items-left{
-	text-align: center;
+input:checked ~ .nav__list, .nav__items-right {
+max-height: 100%;
 }
-.nav__items {
-	display: flex;
-	justify-content: space-around;
+.nav__list, .nav__items-right{
+	max-height: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
-.nav__items-right{
-	display: flex;
-	justify-content: flex-end;
+@media only screen and (min-width: 992px) {
+	.collapsible {
+		label {
+		display: none;
+		}
+	}
+	.nav__list, .nav__items-right {
+		max-height: 100%;
+		padding: .5em 3em .5em 1em;
+		overflow: visible;
+	}
+	.nav__items-right {
+		display: flex;
+		justify-content: flex-end;
+		margin: inherit;
+		padding: inherit;
+		}
+	.nav__list{
+		display: flex;
+		justify-content: flex-end
+		li{
+			padding-left: 2em;
+			padding-right: 1em;
+		}
+	}
 }
+
+
+
+
+

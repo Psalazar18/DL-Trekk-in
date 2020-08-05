@@ -20,6 +20,20 @@
 	border: 0;
 	font-family: $open-sans;
 	font-weight: $bold;
-	padding: 1em 7em;
-	@include relative-converter(font-size, rem, $medium, 16);
+	font-size: $medium;
+	margin-left: 0.3em;
+}
+
+.section__card1-button{
+	padding: 1em 6.5em 1em 5.4em;
+}
+.section__card2-button{
+	padding: 1em 4.3em 1em 5.4em;
+}
+@media only screen and (min-width: 992px){
+	.section__card1-button, .section__card2-button{
+		padding: 1em 7em;
+		font-size: $medium;
+		margin-left: 1.5em;
+	}
 }

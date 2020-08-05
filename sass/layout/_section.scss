@@ -11,33 +11,46 @@
 	padding-top: 5em;
 	font-family: $raleway;
 	font-weight: $bold;
-	@include relative-converter(font-size, rem, $xx-large, 16);
+	font-size: $xx-large;
 }
 .section__card1-title, .section__card2-title{
+	margin-bottom: 0.5em;
 	text-align: left;
 	font-weight: $regular;
-	 @include relative-converter(font-size, rem, $x-large, 16);
+	font-size:  $x-large;
 }
 
 .section__card1-title--huge, .section__card2-title--huge{
+	margin-top: 0;
 	border-bottom: 1px solid $spanish-gray;
 	font-family: $raleway;
 	font-weight: $bold;
-	@include relative-converter(font-size, rem, $xx-large, 16);
+	font-size: $xxxxxx-large;
 }
 
 .section__card1-list, .section__card2-list{
 	border-bottom: 1px solid $spanish-gray;
+	font-family: $open-sans;
+	
+}
+li{
+	margin-bottom: 1em;
+}
+.section__card1-list{
+	padding-bottom:8em;
+}
+.section__card2-list{
+	padding-bottom:1em;
 }
 
 .section__card1-list, .section__card2-list{
-	@include relative-converter(font-size, rem, $medium, 16);
+	font-size: $medium;
 	font-family: $raleway;
 }
 
 .section__card1, .section__card2{
 	background-color: $white;
-	width: 24em;
+	width: 18em;
 	height: 30em;
 	border: 1px solid $spanish-gray;
 	&:hover{
@@ -45,4 +58,25 @@
 		box-shadow: 0px 9px 25px 2px rgba(0,0,0,0.56);
 	}
 	
+}
+.section__card1{
+    margin-bottom: 1em;
+}
+.section__card2{
+	padding-bottom: 4em;
+}
+
+@media only screen and (min-width: 992px){
+	.section__card1, .section__card2{
+		width: 24em;
+		height: 30em;
+		padding: 0;		
+	}
+
+	.section{
+	background-image: url('../images/bg-price.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 5em;
+}
 }

@@ -2,12 +2,20 @@
 	background-image: url('../images/bg-hero.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
-
+}
+.main__intro-title--huge{
+	font-family: $raleway;
+	font-size: $xxxxxx-large !important;
+	font-weight: $bold;
 }
 .main__caracteristicas-title{
 	text-align: center;
 }
+
 .main__graphic{
 	display: flex;
-	justify-content: center;
+	justify-content: end;
+	animation: fade 3s ease-in-out 0s infinite
 }
+
+

@@ -1,23 +1,31 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
 }
 
-h1 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 3.125rem;
+p {
+  font-size: 16px;
 }
 
 h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .container {
@@ -248,13 +256,20 @@ h3 {
   background-repeat: no-repeat;
 }
 
+.main__intro-title--huge {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px !important;
+  font-weight: 700;
+}
+
 .main__caracteristicas-title {
   text-align: center;
 }
 
 .main__graphic {
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  animation: fade 3s ease-in-out 0s infinite;
 }
 
 .section {
@@ -270,34 +285,49 @@ h3 {
   padding-top: 5em;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 2.1875rem;
+  font-size: 35px;
 }
 
 .section__card1-title, .section__card2-title {
+  margin-bottom: 0.5em;
   text-align: left;
   font-weight: 400;
-  font-size: 1.875rem;
+  font-size: 30px;
 }
 
 .section__card1-title--huge, .section__card2-title--huge {
+  margin-top: 0;
   border-bottom: 1px solid #8F9199;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 2.1875rem;
+  font-size: 50px;
 }
 
 .section__card1-list, .section__card2-list {
   border-bottom: 1px solid #8F9199;
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+.section__card1-list {
+  padding-bottom: 8em;
+}
+
+.section__card2-list {
+  padding-bottom: 1em;
 }
 
 .section__card1-list, .section__card2-list {
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Raleway", sans-serif;
 }
 
 .section__card1, .section__card2 {
   background-color: #fff;
-  width: 24em;
+  width: 18em;
   height: 30em;
   border: 1px solid #8F9199;
 }
@@ -306,6 +336,28 @@ h3 {
   box-shadow: 0px 9px 25px 2px rgba(0, 0, 0, 0.56);
 }
 
+.section__card1 {
+  margin-bottom: 1em;
+}
+
+.section__card2 {
+  padding-bottom: 4em;
+}
+
+@media only screen and (min-width: 992px) {
+  .section__card1, .section__card2 {
+    width: 24em;
+    height: 30em;
+    padding: 0;
+  }
+
+  .section {
+    background-image: url("../images/bg-price.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 5em;
+  }
+}
 .footer {
   background-color: #221D23;
   color: #fff;
@@ -343,8 +395,45 @@ h3 {
   border: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  padding: 1em 7em;
-  font-size: 1rem;
+  font-size: 16px;
+  margin-left: 0.3em;
+}
+
+.section__card1-button {
+  padding: 1em 6.5em 1em 5.4em;
+}
+
+.section__card2-button {
+  padding: 1em 4.3em 1em 5.4em;
+}
+
+@media only screen and (min-width: 992px) {
+  .section__card1-button, .section__card2-button {
+    padding: 1em 7em;
+    font-size: 16px;
+    margin-left: 1.5em;
+  }
+}
+.nav {
+  padding: 2em;
+  position: relative;
+}
+
+.nav__logo {
+  position: absolute;
+  text-align: center;
+}
+
+.nav__list {
+  padding-left: 2em;
+  font-family: "Open Sans", sans-serif;
+}
+.nav__list ul {
+  display: flex;
+}
+.nav__list li {
+  list-style-type: none;
+  padding-right: 1em;
 }
 
 .collapsible {
@@ -355,25 +444,46 @@ h3 {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-right: 1.5em;
-  font-size: 1.8rem;
 }
 
-.nav {
-  padding: 2em;
+#menu {
+  display: none;
 }
 
-.nav__items-left {
-  text-align: center;
+input:checked ~ .nav__list, .nav__items-right {
+  max-height: 100%;
 }
 
-.nav__items {
-  display: flex;
-  justify-content: space-around;
+.nav__list, .nav__items-right {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.nav__items-right {
-  display: flex;
-  justify-content: flex-end;
+@media only screen and (min-width: 992px) {
+  .collapsible label {
+    display: none;
+  }
+
+  .nav__list, .nav__items-right {
+    max-height: 100%;
+    padding: 0.5em 3em 0.5em 1em;
+    overflow: visible;
+  }
+
+  .nav__items-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: inherit;
+    padding: inherit;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: flex-end li;
+    justify-content-padding-left: 2em;
+    justify-content-padding-right: 1em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
