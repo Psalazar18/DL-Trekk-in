@@ -1,7 +1,6 @@
-.main{
-	background-image: url('../images/bg-hero.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
+.main__intro{
+	position: absolute;
+	width: 25rem;
 }
 .main__intro-title--huge{
 	font-family: $raleway;
@@ -17,5 +16,19 @@
 	justify-content: end;
 	animation: fade 3s ease-in-out 0s infinite
 }
-
-
+.main__caracteristicas{
+	padding-left: 2em;
+}
+@media only screen and (max-width: 992px){
+	.main__mountain{
+		width: 100%;
+	}
+	.main__intro{
+		position:relative;
+		width: 300px;
+	}
+	.main__graphic{
+		display: flex;
+		justify-content: center;
+	}
+}
